@@ -27,19 +27,19 @@ struct PeopleListScreen: View {
     
     // MARK: - Action functions
     
-    func addPerson() {
+    private func addPerson() {
         let newPerson = Person(name: "", email: "", notes: "")
         modelContext.insert(newPerson)
         path.append(newPerson)
     }
     
-    func addRandomPerson() {
+    private func addRandomPerson() {
         for _ in 1...2 {
             let newPerson = Person.generateRandomPerson()
             modelContext.insert(newPerson)
         }
     }
- 
+    
     // MARK: - Subviews
     
     private var overlayButtonView: some View {
@@ -82,7 +82,6 @@ struct PeopleListScreen: View {
             }
         }
     }
-    
 }
 
 

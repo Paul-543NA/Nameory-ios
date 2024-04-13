@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DA2A75232BB5BD0D006732B2 /* PersonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A75222BB5BD0D006732B2 /* PersonCardView.swift */; };
 		DA2A75252BB61FF0006732B2 /* PersonImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A75242BB61FF0006732B2 /* PersonImageView.swift */; };
-		DA2A75272BBAEBA8006732B2 /* MemorySwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A75262BBAEBA8006732B2 /* MemorySwipeView.swift */; };
 		DA47B8F82BA7340D004A8C70 /* NameoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B8F72BA7340D004A8C70 /* NameoryApp.swift */; };
 		DA47B8FA2BA7340D004A8C70 /* PeopleListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B8F92BA7340D004A8C70 /* PeopleListScreen.swift */; };
 		DA47B8FC2BA73411004A8C70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA47B8FB2BA73411004A8C70 /* Assets.xcassets */; };
@@ -31,7 +30,6 @@
 /* Begin PBXFileReference section */
 		DA2A75222BB5BD0D006732B2 /* PersonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCardView.swift; sourceTree = "<group>"; };
 		DA2A75242BB61FF0006732B2 /* PersonImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonImageView.swift; sourceTree = "<group>"; };
-		DA2A75262BBAEBA8006732B2 /* MemorySwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySwipeView.swift; sourceTree = "<group>"; };
 		DA47B8F42BA7340D004A8C70 /* Nameory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nameory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA47B8F72BA7340D004A8C70 /* NameoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameoryApp.swift; sourceTree = "<group>"; };
 		DA47B8F92BA7340D004A8C70 /* PeopleListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListScreen.swift; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 		DA47B8F62BA7340D004A8C70 /* Nameory */ = {
 			isa = PBXGroup;
 			children = (
-				DAD3B7892BCA9A6900DFF365 /* MemoryScreen.swift */,
 				DAD3B78B2BCAB23500DFF365 /* MemoryScreen */,
 				DA47B8F72BA7340D004A8C70 /* NameoryApp.swift */,
 				DAD55E072BAC903A009ECCC7 /* PeopleListScreen */,
@@ -107,7 +104,7 @@
 		DAD3B78B2BCAB23500DFF365 /* MemoryScreen */ = {
 			isa = PBXGroup;
 			children = (
-				DA2A75262BBAEBA8006732B2 /* MemorySwipeView.swift */,
+				DAD3B7892BCA9A6900DFF365 /* MemoryScreen.swift */,
 				DA2A75222BB5BD0D006732B2 /* PersonCardView.swift */,
 			);
 			path = MemoryScreen;
@@ -217,7 +214,6 @@
 				DAD3B78A2BCA9A6900DFF365 /* MemoryScreen.swift in Sources */,
 				DA47B9062BA73430004A8C70 /* Person.swift in Sources */,
 				DA47B8FA2BA7340D004A8C70 /* PeopleListScreen.swift in Sources */,
-				DA2A75272BBAEBA8006732B2 /* MemorySwipeView.swift in Sources */,
 				DA47B8F82BA7340D004A8C70 /* NameoryApp.swift in Sources */,
 				DA47B9102BA843B6004A8C70 /* Previewer.swift in Sources */,
 				DA47B9082BA73750004A8C70 /* EditPersonView.swift in Sources */,

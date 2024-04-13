@@ -45,7 +45,7 @@ struct PersonCardView: View {
                     .opacity(nameRevealed ? 0 : 1)
             }.padding(.horizontal)
         }
-        .background(Color.gray)
+        .background(Color(UIColor.systemBackground))
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .offset(x: swipex)

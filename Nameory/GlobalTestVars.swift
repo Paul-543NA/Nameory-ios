@@ -30,16 +30,17 @@ extension Person {
             gender: [Gender.male, Gender.female].randomElement()!,
             skinTone: SkinTone.allCases.randomElement()!,
             hairColor: HairColor.allCases.randomElement()!)
-        randomPerson.dateMet = generateRandomDateWithinLastTwoMonths()
+        
+        let twoMonthsAgo = Calendar.current.date(byAdding: .month, value: -2, to: Date.now)!
+        randomPerson.dateMet = generateRandomDateSince(twoMonthsAgo)
         randomPerson.metAt = Event(name: "Climbing group", location: "Event location")
+        randomPerson.lastRemembered = generateRandomDateSince(randomPerson.dateMet)
         
         return randomPerson
     }
 }
 
-fileprivate func generateRandomDateWithinLastTwoMonths() -> Date {
-    let today = Date()
-    let twoMonthsAgo = Calendar.current.date(byAdding: .month, value: -2, to: today)!
-    let randomTimeInterval = Double.random(in: twoMonthsAgo.timeIntervalSinceNow...0)
+fileprivate func generateRandomDateSince(_ startData: Date) -> Date {
+    let randomTimeInterval = Double.random(in: startData.timeIntervalSinceNow...0)
     return Date(timeIntervalSinceNow: randomTimeInterval)
 }
