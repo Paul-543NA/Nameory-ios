@@ -8,45 +8,24 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct PeopleListScreen: View {
     @Environment(\.modelContext) var modelContext
-    @State private var path = NavigationPath()
+    @Binding var path: NavigationPath
     @State private var searchText: String = ""
     @State private var sortOrder = [SortDescriptor(\Person.dateMet, order: .reverse)]
     
     var body: some View {
-        NavigationStack(path: $path) {
-            PropleView(searchString: searchText, sortOrder: sortOrder)
-                .navigationTitle("Nameory")
-                .navigationDestination(for: Person.self) { person in
-                    EditPersonView(person: person, navigationPath: $path)
-                }
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                            Button("Back", systemImage: "arrow.left", action: goBack )
-                    }
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Menu("Sort", systemImage: "arrow.up.arrow.down") {
-                            Picker("Sort", selection: $sortOrder) {
-                                Text("Name")
-                                    .tag([SortDescriptor(\Person.name)])
-
-                                Text("Recently met")
-                                    .tag([SortDescriptor(\Person.dateMet, order: .reverse)])
-                            }
-                        }
-                    }
-                }
-                .searchable(text: $searchText, placement: .toolbar)
-                .overlay ( overlayButtonView )
-        }
+        PropleView(searchString: searchText, sortOrder: sortOrder)
+            .navigationTitle("People you met")
+            .navigationDestination(for: Person.self) { person in
+                EditPersonView(person: person, navigationPath: $path)
+            }
+            .toolbar { ToolbarItem(placement: .navigationBarTrailing) { sortPeopleMenu } }
+            .searchable(text: $searchText, placement: .toolbar)
+            .overlay ( overlayButtonView )
     }
     
     // MARK: - Action functions
-    
-    func goBack() {
-        print("Navigates back")
-    }
     
     func addPerson() {
         let newPerson = Person(name: "", email: "", notes: "")
@@ -63,7 +42,7 @@ struct ContentView: View {
  
     // MARK: - Subviews
     
-    var overlayButtonView: some View {
+    private var overlayButtonView: some View {
         VStack {
             Spacer()
             HStack {
@@ -88,6 +67,18 @@ struct ContentView: View {
                     }
                     .padding(.trailing)
                 }
+            }
+        }
+    }
+    
+    private var sortPeopleMenu: some View {
+        Menu("Sort", systemImage: "arrow.up.arrow.down") {
+            Picker("Sort", selection: $sortOrder) {
+                Text("Name")
+                    .tag([SortDescriptor(\Person.name)])
+                
+                Text("Recently met")
+                    .tag([SortDescriptor(\Person.dateMet, order: .reverse)])
             }
         }
     }

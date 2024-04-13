@@ -12,7 +12,7 @@ import SwiftData
 struct NameoryApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MemoryScreen()
         }
         .modelContainer(for: Person.self)
     }
