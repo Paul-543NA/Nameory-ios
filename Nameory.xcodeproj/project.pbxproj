@@ -22,6 +22,8 @@
 		DA47B9102BA843B6004A8C70 /* Previewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B90F2BA843B6004A8C70 /* Previewer.swift */; };
 		DA47B9122BA8BD03004A8C70 /* PersonListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B9112BA8BD03004A8C70 /* PersonListItemView.swift */; };
 		DA5983BE2BAAD21000820C77 /* AvatarEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5983BD2BAAD21000820C77 /* AvatarEditView.swift */; };
+		DA7CC1F22BBB6B15008B0D76 /* TMPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CC1F12BBB6B15008B0D76 /* TMPView.swift */; };
+		DACB14E02BCA7FF700195CD0 /* GlobalTestVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB14DF2BCA7FF700195CD0 /* GlobalTestVars.swift */; };
 		DAD55E042BAC6F29009ECCC7 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD55E032BAC6F29009ECCC7 /* Avatar.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		DA47B90F2BA843B6004A8C70 /* Previewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previewer.swift; sourceTree = "<group>"; };
 		DA47B9112BA8BD03004A8C70 /* PersonListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListItemView.swift; sourceTree = "<group>"; };
 		DA5983BD2BAAD21000820C77 /* AvatarEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarEditView.swift; sourceTree = "<group>"; };
+		DA7CC1F12BBB6B15008B0D76 /* TMPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMPView.swift; sourceTree = "<group>"; };
+		DACB14DF2BCA7FF700195CD0 /* GlobalTestVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTestVars.swift; sourceTree = "<group>"; };
 		DAD55E032BAC6F29009ECCC7 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +63,7 @@
 		DA47B8EB2BA7340D004A8C70 = {
 			isa = PBXGroup;
 			children = (
+				DA7CC1F12BBB6B15008B0D76 /* TMPView.swift */,
 				DA47B8F62BA7340D004A8C70 /* Nameory */,
 				DA47B8F52BA7340D004A8C70 /* Products */,
 			);
@@ -85,6 +90,7 @@
 				DA47B90F2BA843B6004A8C70 /* Previewer.swift */,
 				DA47B8FB2BA73411004A8C70 /* Assets.xcassets */,
 				DA47B8FD2BA73411004A8C70 /* Preview Content */,
+				DACB14DF2BCA7FF700195CD0 /* GlobalTestVars.swift */,
 			);
 			path = Nameory;
 			sourceTree = "<group>";
@@ -209,6 +215,8 @@
 				DA47B90E2BA83B61004A8C70 /* EditEventView.swift in Sources */,
 				DAD55E042BAC6F29009ECCC7 /* Avatar.swift in Sources */,
 				DA2A75252BB61FF0006732B2 /* PersonImageView.swift in Sources */,
+				DACB14E02BCA7FF700195CD0 /* GlobalTestVars.swift in Sources */,
+				DA7CC1F22BBB6B15008B0D76 /* TMPView.swift in Sources */,
 				DA47B9122BA8BD03004A8C70 /* PersonListItemView.swift in Sources */,
 				DA5983BE2BAAD21000820C77 /* AvatarEditView.swift in Sources */,
 			);

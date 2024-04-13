@@ -12,7 +12,7 @@ struct ContentView: View {
     @Environment(\.modelContext) var modelContext
     @State private var path = NavigationPath()
     @State private var searchText: String = ""
-    @State private var sortOrder = [SortDescriptor(\Person.name)]
+    @State private var sortOrder = [SortDescriptor(\Person.dateMet, order: .reverse)]
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -23,14 +23,29 @@ struct ContentView: View {
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                            Button("Add person", systemImage: "plus", action: addPerson)
+                            Button("Back", systemImage: "arrow.left", action: goBack )
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Back to cards", systemImage: "person.2.crop.square.stack", action: { print("TODO: Move to cards view") })
+                        Menu("Sort", systemImage: "arrow.up.arrow.down") {
+                            Picker("Sort", selection: $sortOrder) {
+                                Text("Name")
+                                    .tag([SortDescriptor(\Person.name)])
+
+                                Text("Recently met")
+                                    .tag([SortDescriptor(\Person.dateMet, order: .reverse)])
+                            }
+                        }
                     }
                 }
                 .searchable(text: $searchText, placement: .toolbar)
+                .overlay ( overlayButtonView )
         }
+    }
+    
+    // MARK: - Action functions
+    
+    func goBack() {
+        print("Navigates back")
     }
     
     func addPerson() {
@@ -39,7 +54,46 @@ struct ContentView: View {
         path.append(newPerson)
     }
     
+    func addRandomPerson() {
+        for _ in 1...2 {
+            let newPerson = Person.generateRandomPerson()
+            modelContext.insert(newPerson)
+        }
+    }
+ 
+    // MARK: - Subviews
+    
+    var overlayButtonView: some View {
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                VStack {
+                    if StaticTestVars.isTesting {
+                        Button(action: addRandomPerson) {
+                            Image(systemName: "plus.circle")
+                                .font(.largeTitle)
+                                .padding()
+                                .background(Circle().fill(Color.blue))
+                                .foregroundColor(.white)
+                        }
+                        .padding(.trailing)
+                    }
+                    Button(action: addPerson) {
+                        Image(systemName: "plus")
+                            .font(.largeTitle)
+                            .padding()
+                            .background(Circle().fill(Color.blue))
+                            .foregroundColor(.white)
+                    }
+                    .padding(.trailing)
+                }
+            }
+        }
+    }
+    
 }
+
 
 //#Preview {
 //    do {

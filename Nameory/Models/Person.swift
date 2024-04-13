@@ -29,7 +29,7 @@ class Person {
         self.dateMet = Date.now
         self.avatar = nil
         self.photoData = nil
-        self.lastRemembered = Date.distantPast
+        self.lastRemembered = Date.now
     }
     
 }

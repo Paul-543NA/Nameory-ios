@@ -98,8 +98,11 @@ extension PersonCardView {
 
 #Preview {
     do {
-        let previewer = try Previewer()
-        return PersonCardView(person: previewer.person)
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try! ModelContainer(for: Person.self, configurations: config)
+    //        let previewer = BetterPReviewer()
+        let person = Person(name: "John doe", email: "someemail@mail.co", notes: "Some notes")
+        return PersonCardView(person: person)
     } catch {
         return Text("Failed to generate preview with error \(error.localizedDescription)")
     }

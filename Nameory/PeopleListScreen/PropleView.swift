@@ -34,25 +34,7 @@ struct PropleView: View {
                 || person.email.localizedStandardContains(searchString)
                 || person.notes.localizedStandardContains(searchString)
             }
-        }, sort: [SortDescriptor(\Person.name)])
-//        if people.count < 1 {
-//    
-//            let person2 = Person(name: "John Doe", email: "john.doe@hismail.com", notes: "Likes to play rugby, a true lad")
-//            person2.avatar = Avatar(gender: .male, skinTone: .regular7, hairColor: .regular5)
-//            modelContext.insert(person2)
-//    
-//            let person3 = Person(name: "Jane Smith", email: "jane.smith@example.com", notes: "Vegan, loves nature and outdoor activities")
-//            person3.avatar = Avatar(gender: .female, skinTone: .regular3, hairColor: .regular2)
-//            modelContext.insert(person3)
-//    
-//            let person4 = Person(name: "Alex Johnson", email: "alex.j@example.net", notes: "Tech enthusiast, blogger")
-//            person4.avatar = Avatar(gender: .female, skinTone: .vivid3, hairColor: .regular4)
-//            modelContext.insert(person4)
-//    
-//            let person5 = Person(name: "Sam Rivera", email: "sam.r@example.org", notes: "Architect, interested in sustainable design")
-//            person5.avatar = Avatar(gender: .male, skinTone: .regular6, hairColor: .regular3)
-//            modelContext.insert(person5)
-//        }
+        }, sort: sortOrder)
     }
     
     func deletePeople(at offsets: IndexSet) {
