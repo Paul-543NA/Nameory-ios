@@ -10,8 +10,11 @@ import SwiftData
 
 struct MemoryScreen: View {
     @State var navigationPath = NavigationPath()
+    // A Query to extrct all the people with a memory date in the past and sort them such that the ones which have already been seen and missed today are put last
     @Query(filter: Person.notRememberedTodayPredicate(),
-             sort: \Person.lastRemembered
+             sort: [
+                SortDescriptor(\Person.nTestedToday, order: .reverse)
+             ]
     ) var people: [Person]
     
     var body: some View {

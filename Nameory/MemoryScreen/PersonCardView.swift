@@ -87,12 +87,16 @@ extension PersonCardView {
 // Handles memory logic
 extension PersonCardView {
     func didRememberPerson() {
-        person.lastRemembered = Date.now
+        person.wasRemembered()
         swipex = 5 * UIScreen.main.bounds.width
     }
     
     func didNotRememberPerson() {
+        person.wasNotRemembered()
         swipex = -5 * UIScreen.main.bounds.width
+        swipex = 0
+        cardRotationAngle = .zero
+        nameRevealed = false
     }
 }
 

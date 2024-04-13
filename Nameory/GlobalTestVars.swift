@@ -34,7 +34,7 @@ extension Person {
         let twoMonthsAgo = Calendar.current.date(byAdding: .month, value: -2, to: Date.now)!
         randomPerson.dateMet = generateRandomDateSince(twoMonthsAgo)
         randomPerson.metAt = Event(name: "Climbing group", location: "Event location")
-        randomPerson.lastRemembered = generateRandomDateSince(randomPerson.dateMet)
+        randomPerson.nextMemoryTestDate = generateRandomDateSince(randomPerson.dateMet)
         
         return randomPerson
     }
