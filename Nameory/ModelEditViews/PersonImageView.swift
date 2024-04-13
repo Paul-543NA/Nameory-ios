@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct PersonImageView: View {
-    
+
     @Bindable var person: Person
     var width: CGFloat
     var height: CGFloat

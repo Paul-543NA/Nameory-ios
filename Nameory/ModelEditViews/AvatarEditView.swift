@@ -116,17 +116,18 @@ struct FemaleAvatarView: View {
                 
                 FemaleSkinIcon()
                     .fill(avatar.skinTone.color)
-                    .frame(width: 0.5785*geometry.size.width, height: 0.904*geometry.size.height)
-                    .offset(x: 0.055*geometry.size.width)
+                    .frame(width: 0.579*geometry.size.width, height: 0.916*geometry.size.height)
+                    .offset(x: 0.06*geometry.size.width, y: 0.005*geometry.size.height)
                 
                 LongHairFrontIcon()
                     .fill(avatar.hairColor.color)
-                    .frame(width: 0.5736*geometry.size.width, height: 0.656*geometry.size.height)
-                    .offset(x: 0.018*geometry.size.width, y: -0.317*geometry.size.height)
+                    .frame(width: 0.579*geometry.size.width, height: 0.63*geometry.size.height)
+                    .offset(x: 0.013*geometry.size.width, y: -0.32*geometry.size.height)
                 
                 FemaleBodyIcon()
                     .fill(Color(red: 101/255, green: 27/255, blue: 52/255))
-                    .frame(width: geometry.size.width, height: 0.3449*geometry.size.height)
+                    .frame(width: 1.002*geometry.size.width, height: 0.3449*geometry.size.height)
+                    .offset(x: 0.001*geometry.size.width)
                 
             }
         }
@@ -337,7 +338,8 @@ struct MaleAvatarView: View {
                 
                 MaleBodyIcon()
                     .fill(Color(red: 101/255, green: 27/255, blue: 52/255))
-                    .frame(width: geometry.size.width, height: 0.3618*geometry.size.height)
+                    .frame(width: 1.006*geometry.size.width, height: 0.3618*geometry.size.height)
+                    .offset(x: 0.001*geometry.size.width)
                 
                 
             }
