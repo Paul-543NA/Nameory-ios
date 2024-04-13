@@ -35,14 +35,12 @@ struct PersonCardView: View {
                 .padding(.bottom)
             Text(person.notes == "" ? "No notes about this person" : person.notes)
             Spacer()
-            Button(action: { withAnimation { nameRevealed = true } }) {
-                Text("Reveal Name")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .opacity(nameRevealed ? 0 : 1)
+            HStack {
+                Spacer()
+                Text("Tap to reveal name")
+                    .foregroundColor(.primary)
+                    .opacity(nameRevealed ? 0 : 0.5)
+                Spacer()
             }.padding(.horizontal)
         }
         .background(Color(UIColor.systemBackground))
@@ -57,6 +55,7 @@ struct PersonCardView: View {
             .onChanged(onDragChanged)
             .onEnded(onDragEnded)
         )
+        .onTapGesture { withAnimation { nameRevealed = true } }
     }
 }
 
