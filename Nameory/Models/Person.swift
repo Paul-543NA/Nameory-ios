@@ -53,18 +53,20 @@ extension NameorySchemaV1 {
         }
         
         func wasRemembered() {
+            let todayStart = Calendar.current.date(bySettingHour: 00, minute: 1, second: 0, of: Date.now)!
+
             if nTestedToday == 0 {
                 // Increase the memory interval index but do not exceed the maximum index.
                 memoryIntervalIndex = min(memoryIntervalIndex + 1, Person.memoryIntervals.count - 1)
             } else {
                 // Decrease the memory interval index to increase frequency of testing and reset testedToday flag.
-                memoryIntervalIndex = max(memoryIntervalIndex - 1, 0)
+                memoryIntervalIndex = max(memoryIntervalIndex - 1, 1)
                 nTestedToday = 0
             }
             // Calculate the time interval until the next test based on the updated memory interval index.
             let intervalUntilNextTest = Person.memoryIntervals[memoryIntervalIndex]
             // Schedule the next memory test by adding the interval to the current next test date.
-            nextMemoryTestDate = nextMemoryTestDate.addingTimeInterval(intervalUntilNextTest)
+            nextMemoryTestDate = todayStart.addingTimeInterval(intervalUntilNextTest)
         }
         
         func wasNotRemembered() {
