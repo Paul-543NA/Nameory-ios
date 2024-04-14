@@ -25,6 +25,7 @@
 		DACB14E02BCA7FF700195CD0 /* GlobalTestVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB14DF2BCA7FF700195CD0 /* GlobalTestVars.swift */; };
 		DAD3B78A2BCA9A6900DFF365 /* MemoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3B7892BCA9A6900DFF365 /* MemoryScreen.swift */; };
 		DAD3B78D2BCBE9AF00DFF365 /* DataSchemas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3B78C2BCBE9AF00DFF365 /* DataSchemas.swift */; };
+		DAD3B78F2BCC469F00DFF365 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3B78E2BCC469F00DFF365 /* OnboardingView.swift */; };
 		DAD55E042BAC6F29009ECCC7 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD55E032BAC6F29009ECCC7 /* Avatar.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		DACB14DF2BCA7FF700195CD0 /* GlobalTestVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTestVars.swift; sourceTree = "<group>"; };
 		DAD3B7892BCA9A6900DFF365 /* MemoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryScreen.swift; sourceTree = "<group>"; };
 		DAD3B78C2BCBE9AF00DFF365 /* DataSchemas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSchemas.swift; sourceTree = "<group>"; };
+		DAD3B78E2BCC469F00DFF365 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DAD55E032BAC6F29009ECCC7 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 			children = (
 				DAD3B78B2BCAB23500DFF365 /* MemoryScreen */,
 				DA47B8F72BA7340D004A8C70 /* NameoryApp.swift */,
+				DAD3B78E2BCC469F00DFF365 /* OnboardingView.swift */,
 				DAD55E072BAC903A009ECCC7 /* PeopleListScreen */,
 				DAD55E062BAC9011009ECCC7 /* ModelEditViews */,
 				DAD55E052BAC8FE4009ECCC7 /* Models */,
@@ -217,6 +220,7 @@
 				DAD3B78A2BCA9A6900DFF365 /* MemoryScreen.swift in Sources */,
 				DA47B9062BA73430004A8C70 /* Person.swift in Sources */,
 				DA47B8FA2BA7340D004A8C70 /* PeopleListScreen.swift in Sources */,
+				DAD3B78F2BCC469F00DFF365 /* OnboardingView.swift in Sources */,
 				DA47B8F82BA7340D004A8C70 /* NameoryApp.swift in Sources */,
 				DA47B9102BA843B6004A8C70 /* Previewer.swift in Sources */,
 				DA47B9082BA73750004A8C70 /* EditPersonView.swift in Sources */,
