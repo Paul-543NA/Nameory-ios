@@ -21,11 +21,11 @@
 		DA47B9102BA843B6004A8C70 /* Previewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B90F2BA843B6004A8C70 /* Previewer.swift */; };
 		DA47B9122BA8BD03004A8C70 /* PersonListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B9112BA8BD03004A8C70 /* PersonListItemView.swift */; };
 		DA5983BE2BAAD21000820C77 /* AvatarEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5983BD2BAAD21000820C77 /* AvatarEditView.swift */; };
-		DA7CC1F22BBB6B15008B0D76 /* TMPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CC1F12BBB6B15008B0D76 /* TMPView.swift */; };
 		DACB14E02BCA7FF700195CD0 /* GlobalTestVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB14DF2BCA7FF700195CD0 /* GlobalTestVars.swift */; };
 		DAD3B78A2BCA9A6900DFF365 /* MemoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3B7892BCA9A6900DFF365 /* MemoryScreen.swift */; };
 		DAD3B78D2BCBE9AF00DFF365 /* DataSchemas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3B78C2BCBE9AF00DFF365 /* DataSchemas.swift */; };
 		DAD3B78F2BCC469F00DFF365 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3B78E2BCC469F00DFF365 /* OnboardingView.swift */; };
+		DAD3B7912BCC504A00DFF365 /* AddPersonButtonOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3B7902BCC504A00DFF365 /* AddPersonButtonOverlay.swift */; };
 		DAD55E042BAC6F29009ECCC7 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD55E032BAC6F29009ECCC7 /* Avatar.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,11 +45,11 @@
 		DA47B90F2BA843B6004A8C70 /* Previewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previewer.swift; sourceTree = "<group>"; };
 		DA47B9112BA8BD03004A8C70 /* PersonListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListItemView.swift; sourceTree = "<group>"; };
 		DA5983BD2BAAD21000820C77 /* AvatarEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarEditView.swift; sourceTree = "<group>"; };
-		DA7CC1F12BBB6B15008B0D76 /* TMPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMPView.swift; sourceTree = "<group>"; };
 		DACB14DF2BCA7FF700195CD0 /* GlobalTestVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTestVars.swift; sourceTree = "<group>"; };
 		DAD3B7892BCA9A6900DFF365 /* MemoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryScreen.swift; sourceTree = "<group>"; };
 		DAD3B78C2BCBE9AF00DFF365 /* DataSchemas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSchemas.swift; sourceTree = "<group>"; };
 		DAD3B78E2BCC469F00DFF365 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		DAD3B7902BCC504A00DFF365 /* AddPersonButtonOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonButtonOverlay.swift; sourceTree = "<group>"; };
 		DAD55E032BAC6F29009ECCC7 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +67,6 @@
 		DA47B8EB2BA7340D004A8C70 = {
 			isa = PBXGroup;
 			children = (
-				DA7CC1F12BBB6B15008B0D76 /* TMPView.swift */,
 				DA47B8F62BA7340D004A8C70 /* Nameory */,
 				DA47B8F52BA7340D004A8C70 /* Products */,
 			);
@@ -129,6 +128,7 @@
 		DAD55E062BAC9011009ECCC7 /* ModelEditViews */ = {
 			isa = PBXGroup;
 			children = (
+				DAD3B7902BCC504A00DFF365 /* AddPersonButtonOverlay.swift */,
 				DA47B9072BA73750004A8C70 /* EditPersonView.swift */,
 				DA5983BD2BAAD21000820C77 /* AvatarEditView.swift */,
 				DA2A75242BB61FF0006732B2 /* PersonImageView.swift */,
@@ -232,8 +232,8 @@
 				DA2A75252BB61FF0006732B2 /* PersonImageView.swift in Sources */,
 				DAD3B78D2BCBE9AF00DFF365 /* DataSchemas.swift in Sources */,
 				DACB14E02BCA7FF700195CD0 /* GlobalTestVars.swift in Sources */,
-				DA7CC1F22BBB6B15008B0D76 /* TMPView.swift in Sources */,
 				DA47B9122BA8BD03004A8C70 /* PersonListItemView.swift in Sources */,
+				DAD3B7912BCC504A00DFF365 /* AddPersonButtonOverlay.swift in Sources */,
 				DA5983BE2BAAD21000820C77 /* AvatarEditView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

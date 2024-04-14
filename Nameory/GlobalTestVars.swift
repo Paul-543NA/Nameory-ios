@@ -8,7 +8,7 @@
 import Foundation
 
 struct StaticTestVars {
-    static var isTesting = true
+    static var isTesting = false
 }
 
 func generateRandomDateSince(_ startData: Date) -> Date {

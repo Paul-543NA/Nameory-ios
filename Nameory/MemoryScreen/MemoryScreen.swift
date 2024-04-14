@@ -16,6 +16,7 @@ struct MemoryScreen: View {
                 SortDescriptor(\Person.nTestedToday, order: .reverse)
              ]
     ) var people: [Person]
+    @AppStorage("showOnboardingView") var showOnboardingView = false
     
     var body: some View {
         NavigationStack(path: $navigationPath) {
@@ -26,7 +27,19 @@ struct MemoryScreen: View {
                 }
             }
             .navigationTitle("What is their name?")
-            .toolbar { ToolbarItem(placement: .navigationBarTrailing) { modeToListButton } }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) { infoButton }
+                ToolbarItem(placement: .navigationBarTrailing) { modeToListButton }
+            }
+            .navigationDestination(for: String.self) { str in
+                if str == "PeopleListScreen" {
+                    PeopleListScreen(path: $navigationPath)
+                }
+            }
+            .navigationDestination(for: Person.self) { person in
+                EditPersonView(person: person, navigationPath: $navigationPath)
+            }
+            .overlay ( AddPersonButtonOverlay(path: $navigationPath) )
         }
     }
     
@@ -36,22 +49,25 @@ struct MemoryScreen: View {
         }
     }
     
+    private var infoButton: some View {
+        Button("Show information", systemImage: "questionmark.circle") {
+            withAnimation { showOnboardingView = true }
+        }
+    }
+    
     private func goToPeopleList() {
         navigationPath.append("PeopleListScreen")
     }
     
     private var noMorePeopleView: some View {
         VStack {
+            Spacer()
             Text("You're done remembering people for today!")
                 .padding()
             Button("Add more people") {
                 goToPeopleList()
             }
-        }
-        .navigationDestination(for: String.self) { str in
-            if str == "PeopleListScreen" {
-                PeopleListScreen(path: $navigationPath)
-            }
+            Spacer()
         }
     }
 }
