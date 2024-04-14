@@ -22,7 +22,7 @@ struct Previewer {
         self.container = try ModelContainer(for: Person.self, configurations: config)
         self.event = Event(name: "TEDxMinesNancy", location: "Nancy")
         self.avatar = Avatar(gender: .male, skinTone: .regular3, hairColor: .regular3)
-        self.person = Person(name: "Dotan Negrin", email: "dotan@example.com", notes: "", metAt: self.event)
+        self.person = Person(name: "Alex Doe", notes: "", metAt: self.event)
         self.person.metAt = event
         self.person.avatar = self.avatar
 //        container.mainContext.insert(person)

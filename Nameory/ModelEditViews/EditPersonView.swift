@@ -52,9 +52,6 @@ struct EditPersonView: View {
             Section {
                 TextField("Name", text: $person.name)
                     .textContentType(.name)
-                TextField("Email adress", text: $person.email)
-                    .textContentType(.emailAddress)
-                    .textInputAutocapitalization(.never)
                 DatePicker("Date met", selection: $person.dateMet, displayedComponents: [.date])
             }
             Section("Where did you meet?") {

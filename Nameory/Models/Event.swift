@@ -8,15 +8,20 @@
 import Foundation
 import SwiftData
 
-@Model
-class Event {
-    var name: String
-    var location: String
-    var prople = [Person]()
+typealias Event = NameorySchemaV1.Event
+
+extension NameorySchemaV1 {
     
-    init(name: String, location: String, prople: [Person] = [Person]()) {
-        self.name = name
-        self.location = location
-        self.prople = prople
+    @Model
+    class Event {
+        var name: String
+        var location: String
+        var prople = [Person]()
+        
+        init(name: String, location: String, prople: [Person] = [Person]()) {
+            self.name = name
+            self.location = location
+            self.prople = prople
+        }
     }
 }

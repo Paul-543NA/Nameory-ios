@@ -28,7 +28,7 @@ struct PeopleListScreen: View {
     // MARK: - Action functions
     
     private func addPerson() {
-        let newPerson = Person(name: "", email: "", notes: "")
+        let newPerson = Person(name: "", notes: "")
         modelContext.insert(newPerson)
         path.append(newPerson)
     }

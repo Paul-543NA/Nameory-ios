@@ -31,7 +31,6 @@ struct PropleView: View {
             } else {
                 // Nore that these predicates are performed in order, perhapsnworth putting the most efficient ones first
                 person.name.localizedStandardContains(searchString)
-                || person.email.localizedStandardContains(searchString)
                 || person.notes.localizedStandardContains(searchString)
             }
         }, sort: sortOrder)

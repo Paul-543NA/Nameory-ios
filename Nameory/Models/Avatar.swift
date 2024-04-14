@@ -9,20 +9,24 @@ import Foundation
 import SwiftUI
 import SwiftData
 
-@Model
-class Avatar {
-    var gender: Gender
-    var skinTone: SkinTone
-    var hairColor: HairColor
-    
-    init(gender: Gender, skinTone: SkinTone, hairColor: HairColor) {
-        self.gender = gender
-        self.skinTone = skinTone
-        self.hairColor = hairColor
-    }
-    
-    static func defaultAvatar() -> Avatar {
-        return Avatar(gender: .female, skinTone: .regular1, hairColor: .regular1)
+typealias Avatar = NameorySchemaV1.Avatar
+
+extension NameorySchemaV1 {
+    @Model
+    class Avatar {
+        var gender: Gender
+        var skinTone: SkinTone
+        var hairColor: HairColor
+        
+        init(gender: Gender, skinTone: SkinTone, hairColor: HairColor) {
+            self.gender = gender
+            self.skinTone = skinTone
+            self.hairColor = hairColor
+        }
+        
+        static func defaultAvatar() -> Avatar {
+            return Avatar(gender: .female, skinTone: .regular1, hairColor: .regular1)
+        }
     }
 }
 
