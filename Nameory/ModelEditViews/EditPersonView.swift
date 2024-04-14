@@ -26,8 +26,6 @@ struct EditPersonView: View {
     
     var body: some View {
         
-        
-        
         Form {
             
             Section {
@@ -85,6 +83,14 @@ struct EditPersonView: View {
         .photosPicker(isPresented: $showPhotoPicker, selection: $selectedPhotoItem, matching: .images)
         .sheet(isPresented: $showAvatarEditor) {
             AvatarEditView(avatar: Binding($person.avatar)!)
+        }
+        .onDisappear {
+            let personHasNoName = person.name == ""
+            let personHasNoPicture = (person.avatar == nil && person.photoData == nil)
+            if personHasNoName && personHasNoPicture
+            {
+                modelContext.delete(person)
+            }
         }
     }
     

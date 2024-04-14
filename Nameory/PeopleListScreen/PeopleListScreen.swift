@@ -17,59 +17,12 @@ struct PeopleListScreen: View {
     var body: some View {
         PropleView(searchString: searchText, sortOrder: sortOrder)
             .navigationTitle("People you met")
-            .navigationDestination(for: Person.self) { person in
-                EditPersonView(person: person, navigationPath: $path)
-            }
             .toolbar { ToolbarItem(placement: .navigationBarTrailing) { sortPeopleMenu } }
             .searchable(text: $searchText, placement: .toolbar)
-            .overlay ( overlayButtonView )
-    }
-    
-    // MARK: - Action functions
-    
-    private func addPerson() {
-        let newPerson = Person(name: "", notes: "")
-        modelContext.insert(newPerson)
-        path.append(newPerson)
-    }
-    
-    private func addRandomPerson() {
-        for _ in 1...2 {
-            let newPerson = Person.generateRandomPerson()
-            modelContext.insert(newPerson)
-        }
+            .overlay ( AddPersonButtonOverlay(path: $path) )
     }
     
     // MARK: - Subviews
-    
-    private var overlayButtonView: some View {
-        VStack {
-            Spacer()
-            HStack {
-                Spacer()
-                VStack {
-                    if StaticTestVars.isTesting {
-                        Button(action: addRandomPerson) {
-                            Image(systemName: "plus.circle")
-                                .font(.largeTitle)
-                                .padding()
-                                .background(Circle().fill(Color.blue))
-                                .foregroundColor(.white)
-                        }
-                        .padding(.trailing)
-                    }
-                    Button(action: addPerson) {
-                        Image(systemName: "plus")
-                            .font(.largeTitle)
-                            .padding()
-                            .background(Circle().fill(Color.blue))
-                            .foregroundColor(.white)
-                    }
-                    .padding(.trailing)
-                }
-            }
-        }
-    }
     
     private var sortPeopleMenu: some View {
         Menu("Sort", systemImage: "arrow.up.arrow.down") {
@@ -83,7 +36,6 @@ struct PeopleListScreen: View {
         }
     }
 }
-
 
 //#Preview {
 //    do {
