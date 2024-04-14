@@ -25,7 +25,7 @@ struct MemoryScreen: View {
                     PersonCardView(person: person)
                 }
             }
-            .navigationTitle("\(people.count) people")
+            .navigationTitle("What is their name?")
             .toolbar { ToolbarItem(placement: .navigationBarTrailing) { modeToListButton } }
         }
     }
@@ -42,7 +42,7 @@ struct MemoryScreen: View {
     
     private var noMorePeopleView: some View {
         VStack {
-            Text("Welcome to MemoryView")
+            Text("You're done remembering people for today!")
                 .padding()
             Button("Add more people") {
                 goToPeopleList()
