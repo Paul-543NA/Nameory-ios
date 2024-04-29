@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct PropleView: View {
+struct PeopleView: View {
     @Environment(\.modelContext) var modelContext
     @Query var people: [Person]
     
@@ -32,6 +32,7 @@ struct PropleView: View {
                 // Nore that these predicates are performed in order, perhapsnworth putting the most efficient ones first
                 person.name.localizedStandardContains(searchString)
                 || person.notes.localizedStandardContains(searchString)
+                || person.metAt?.name.localizedStandardContains(searchString) ?? false
             }
         }, sort: sortOrder)
     }

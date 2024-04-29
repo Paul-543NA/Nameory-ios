@@ -49,7 +49,7 @@ extension NameorySchemaV1 {
             self.dateMet = Date.now
             self.avatar = nil
             self.photoData = nil
-            self.nextMemoryTestDate = Date.now
+            self.nextMemoryTestDate = Calendar.current.date(byAdding: DateComponents(day: -1), to: Date.now)!
         }
         
         func wasRemembered() {

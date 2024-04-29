@@ -15,6 +15,67 @@ struct PersonCardView: View {
     @State var cardRotationAngle: Angle = .zero
     
     var body: some View {
+        ZStack {
+            card
+            headerIndicator
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding()
+        .background(.background)
+        .offset(x: swipex)
+        .rotationEffect(cardRotationAngle)
+        .animation(.snappy, value: swipex)
+        .animation(.snappy, value: cardRotationAngle)
+        .gesture(
+            DragGesture()
+            .onChanged(onDragChanged)
+            .onEnded(onDragEnded)
+        )
+        .onTapGesture { withAnimation { nameRevealed = true } }
+    }
+    
+    private var headerIndicator: some View {
+        VStack {
+            HStack {
+                Spacer()
+                Text(swipex > 0 ? "REMEMBERED" : "FORGOTTEN")
+                    .padding(.vertical)
+                    .font(.title)
+                Spacer()
+            }
+            .background {
+                if swipex > 0 {
+                    Color.green
+                        .opacity(0.5)
+                        .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 20, topTrailing: 20)))
+                } else {
+                    Color.red
+                        .opacity(0.5)
+                        .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 20, topTrailing: 20)))
+                }
+            }
+            .opacity(min(abs(swipex) / 50.0, 1))
+            Spacer()
+        }
+    }
+    
+    private var card: some View {
+        VStack {
+            ScrollView {
+                cardContent
+            }
+            Spacer()
+            HStack {
+                Spacer()
+                Text("Tap to reveal name")
+                    .foregroundColor(.primary)
+                    .opacity(nameRevealed ? 0 : 0.5)
+                Spacer()
+            }.padding(.horizontal)
+        }
+    }
+    
+    private var cardContent: some View {
         VStack(alignment: .leading) {
             GeometryReader { geometry in
                 // This VStack is used to vertically center the PersonImageView within the GeometryReader
@@ -27,35 +88,17 @@ struct PersonCardView: View {
             // Limit GeometryReader's height to prevent it from taking up too much vertical space
             // This ensures the height is dynamically matched to the width
             .aspectRatio(1, contentMode: .fit)
-
+            
             Text(nameRevealed ? person.name : "??????")
                 .font(.title)
-            Text("Net at \(person.metAt?.name ?? "N/A")")
+            Text("From: \(person.metAt?.name ?? "N/A")")
                 .font(.subheadline)
                 .padding(.bottom)
+            
             Text(person.notes == "" ? "No notes about this person" : person.notes)
-            Spacer()
-            HStack {
-                Spacer()
-                Text("Tap to reveal name")
-                    .foregroundColor(.primary)
-                    .opacity(nameRevealed ? 0 : 0.5)
-                Spacer()
-            }.padding(.horizontal)
+            
         }
         .background(Color(UIColor.systemBackground))
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .offset(x: swipex)
-        .rotationEffect(cardRotationAngle)
-        .animation(.snappy, value: swipex)
-        .animation(.snappy, value: cardRotationAngle)
-        .gesture(
-            DragGesture()
-            .onChanged(onDragChanged)
-            .onEnded(onDragEnded)
-        )
-        .onTapGesture { withAnimation { nameRevealed = true } }
     }
 }
 

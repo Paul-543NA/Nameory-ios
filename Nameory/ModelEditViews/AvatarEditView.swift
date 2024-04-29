@@ -31,11 +31,11 @@ struct AvatarEditView: View {
                         .tag(Gender.female)
                 }
             }
-            Section("Hair Color") {
-                CirclesColorPicker(title: "Hair Color", selection: $avatar.hairColor)
-            }
             Section("Skin Tone") {
                 CirclesColorPicker(title: "Skin tone", selection: $avatar.skinTone)
+            }
+            Section("Hair Color") {
+                CirclesColorPicker(title: "Hair Color", selection: $avatar.hairColor)
             }
         }
         .navigationTitle("Edit event")

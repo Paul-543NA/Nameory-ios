@@ -15,7 +15,7 @@ struct PeopleListScreen: View {
     @State private var sortOrder = [SortDescriptor(\Person.dateMet, order: .reverse)]
     
     var body: some View {
-        PropleView(searchString: searchText, sortOrder: sortOrder)
+        PeopleView(searchString: searchText, sortOrder: sortOrder)
             .navigationTitle("People you met")
             .toolbar { ToolbarItem(placement: .navigationBarTrailing) { sortPeopleMenu } }
             .searchable(text: $searchText, placement: .toolbar)

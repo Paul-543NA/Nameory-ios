@@ -18,6 +18,7 @@ struct EditPersonView: View {
     @State private var showingActionSheet = false
     @State private var showPhotoPicker = false
     @State private var showAvatarEditor = false
+    @State private var isEventViewPresented = false
     
     @Query(sort: [
         SortDescriptor(\Event.name),
@@ -52,22 +53,19 @@ struct EditPersonView: View {
                     .textContentType(.name)
                 DatePicker("Date met", selection: $person.dateMet, displayedComponents: [.date])
             }
+            
             Section("Where did you meet?") {
-                Picker("Met at", selection: $person.metAt) {
-                    Text("Unknown event")
-                        .tag(Optional<Event>.none)
-                    
-                    if !events.isEmpty {
-                        Divider()
-                        
-                        ForEach(events) {event in
-                            Text(event.name)
-                                .tag(Optional(event))
-                        }
+                HStack {
+                    if let eventName = person.metAt?.name {
+                        Text(eventName)
+                    } else {
+                        Text("Select an Event")
+                            .foregroundColor(Color.blue)
                     }
+                    Spacer()
                 }
-                
-                Button("Add new event", action: addEvent)
+                .background { Color.clear }
+                .onTapGesture { isEventViewPresented = true }
             }
             
             Section("Details") {
@@ -76,11 +74,11 @@ struct EditPersonView: View {
         }
         .navigationTitle("Edit person")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationDestination(for: Event.self) { event in
-            EditEventView(event: event)
-        }
         .onChange(of: selectedPhotoItem, loadPhotoData)
         .photosPicker(isPresented: $showPhotoPicker, selection: $selectedPhotoItem, matching: .images)
+        .navigationDestination(isPresented: $isEventViewPresented) {
+            EventsSelectionScreen(person: person)
+        }
         .sheet(isPresented: $showAvatarEditor) {
             AvatarEditView(avatar: Binding($person.avatar)!)
         }
@@ -92,12 +90,15 @@ struct EditPersonView: View {
                 modelContext.delete(person)
             }
         }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) { doneButton }
+        }
     }
     
-    func addEvent() {
-        let event = Event(name: "", location: "")
-        modelContext.insert(event)
-        navigationPath.append(event)
+    var doneButton: some View {
+        Button("Done") {
+            navigationPath.removeLast()
+        }
     }
     
     func addAvatar() {

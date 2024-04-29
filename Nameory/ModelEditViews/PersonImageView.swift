@@ -19,9 +19,10 @@ struct PersonImageView: View {
         if let imageData = person.photoData, let uiimage = UIImage(data: imageData) {
             Image(uiImage: uiimage)
                 .resizable()
+                .scaledToFill()
                 .frame(width: width, height: height)
                 .clipShape(.rect(cornerRadius: cornerRadius))
-                .scaledToFit()
+                
         } else if let avatar = person.avatar {
             AvatarView(avatar: avatar)
                 .frame(width: width, height: height)

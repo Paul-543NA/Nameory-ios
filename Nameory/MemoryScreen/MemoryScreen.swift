@@ -64,6 +64,7 @@ struct MemoryScreen: View {
             Spacer()
             Text("You're done remembering people for today!")
                 .padding()
+                .multilineTextAlignment(.center)
             Button("Add more people") {
                 goToPeopleList()
             }
