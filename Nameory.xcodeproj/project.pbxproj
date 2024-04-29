@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA04434B2BD6A182007880FC /* EventsSelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04434A2BD6A182007880FC /* EventsSelectionScreen.swift */; };
 		DA2A75232BB5BD0D006732B2 /* PersonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A75222BB5BD0D006732B2 /* PersonCardView.swift */; };
 		DA2A75252BB61FF0006732B2 /* PersonImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A75242BB61FF0006732B2 /* PersonImageView.swift */; };
 		DA47B8F82BA7340D004A8C70 /* NameoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B8F72BA7340D004A8C70 /* NameoryApp.swift */; };
@@ -15,7 +16,7 @@
 		DA47B8FF2BA73411004A8C70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA47B8FE2BA73411004A8C70 /* Preview Assets.xcassets */; };
 		DA47B9062BA73430004A8C70 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B9052BA73430004A8C70 /* Person.swift */; };
 		DA47B9082BA73750004A8C70 /* EditPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B9072BA73750004A8C70 /* EditPersonView.swift */; };
-		DA47B90A2BA73D95004A8C70 /* PropleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B9092BA73D95004A8C70 /* PropleView.swift */; };
+		DA47B90A2BA73D95004A8C70 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B9092BA73D95004A8C70 /* PeopleView.swift */; };
 		DA47B90C2BA83A34004A8C70 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B90B2BA83A34004A8C70 /* Event.swift */; };
 		DA47B90E2BA83B61004A8C70 /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B90D2BA83B61004A8C70 /* EditEventView.swift */; };
 		DA47B9102BA843B6004A8C70 /* Previewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B90F2BA843B6004A8C70 /* Previewer.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA04434A2BD6A182007880FC /* EventsSelectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSelectionScreen.swift; sourceTree = "<group>"; };
 		DA2A75222BB5BD0D006732B2 /* PersonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCardView.swift; sourceTree = "<group>"; };
 		DA2A75242BB61FF0006732B2 /* PersonImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonImageView.swift; sourceTree = "<group>"; };
 		DA47B8F42BA7340D004A8C70 /* Nameory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nameory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +41,7 @@
 		DA47B8FE2BA73411004A8C70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA47B9052BA73430004A8C70 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		DA47B9072BA73750004A8C70 /* EditPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonView.swift; sourceTree = "<group>"; };
-		DA47B9092BA73D95004A8C70 /* PropleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropleView.swift; sourceTree = "<group>"; };
+		DA47B9092BA73D95004A8C70 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		DA47B90B2BA83A34004A8C70 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		DA47B90D2BA83B61004A8C70 /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
 		DA47B90F2BA843B6004A8C70 /* Previewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previewer.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		DA47B8EB2BA7340D004A8C70 = {
 			isa = PBXGroup;
 			children = (
+				DA04434A2BD6A182007880FC /* EventsSelectionScreen.swift */,
 				DA47B8F62BA7340D004A8C70 /* Nameory */,
 				DA47B8F52BA7340D004A8C70 /* Products */,
 			);
@@ -141,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				DA47B8F92BA7340D004A8C70 /* PeopleListScreen.swift */,
-				DA47B9092BA73D95004A8C70 /* PropleView.swift */,
+				DA47B9092BA73D95004A8C70 /* PeopleView.swift */,
 				DA47B9112BA8BD03004A8C70 /* PersonListItemView.swift */,
 			);
 			path = PeopleListScreen;
@@ -221,11 +224,12 @@
 				DA47B9062BA73430004A8C70 /* Person.swift in Sources */,
 				DA47B8FA2BA7340D004A8C70 /* PeopleListScreen.swift in Sources */,
 				DAD3B78F2BCC469F00DFF365 /* OnboardingView.swift in Sources */,
+				DA04434B2BD6A182007880FC /* EventsSelectionScreen.swift in Sources */,
 				DA47B8F82BA7340D004A8C70 /* NameoryApp.swift in Sources */,
 				DA47B9102BA843B6004A8C70 /* Previewer.swift in Sources */,
 				DA47B9082BA73750004A8C70 /* EditPersonView.swift in Sources */,
 				DA47B90C2BA83A34004A8C70 /* Event.swift in Sources */,
-				DA47B90A2BA73D95004A8C70 /* PropleView.swift in Sources */,
+				DA47B90A2BA73D95004A8C70 /* PeopleView.swift in Sources */,
 				DA2A75232BB5BD0D006732B2 /* PersonCardView.swift in Sources */,
 				DA47B90E2BA83B61004A8C70 /* EditEventView.swift in Sources */,
 				DAD55E042BAC6F29009ECCC7 /* Avatar.swift in Sources */,
@@ -374,8 +378,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,9 +386,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.paulfestor.nameory.Nameory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -403,8 +410,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -412,9 +418,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.paulfestor.nameory.Nameory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
