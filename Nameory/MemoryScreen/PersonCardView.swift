@@ -143,13 +143,6 @@ extension PersonCardView {
 }
 
 #Preview {
-    do {
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
-        let container = try! ModelContainer(for: Person.self, configurations: config)
-    //        let previewer = BetterPReviewer()
-        let person = Person(name: "John doe", notes: "Some notes")
-        return PersonCardView(person: person)
-    } catch {
-        return Text("Failed to generate preview with error \(error.localizedDescription)")
-    }
+    let person = Person(name: "John doe", notes: "Some notes")
+    return PersonCardView(person: person)
 }

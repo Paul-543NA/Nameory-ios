@@ -25,6 +25,6 @@ struct Previewer {
         self.person = Person(name: "Alex Doe", notes: "", metAt: self.event)
         self.person.metAt = event
         self.person.avatar = self.avatar
-//        container.mainContext.insert(person)
+        container.mainContext.insert(person)
     }
 }
