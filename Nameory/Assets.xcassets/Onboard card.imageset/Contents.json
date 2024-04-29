@@ -17,6 +17,7 @@
       "scale" : "1x"
     },
     {
+      "filename" : "Onboard 1 light@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -27,10 +28,12 @@
           "value" : "dark"
         }
       ],
+      "filename" : "Onboard 1 dark@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Onboard 1 light@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -41,6 +44,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "Onboard 1 dark@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
