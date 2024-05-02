@@ -30,7 +30,8 @@ extension NameorySchemaV1 {
 
         static let memoryIntervals: [TimeInterval] = [
             0 * TimeInterval.secondsPerDay,                              // Zero days
-            1 * TimeInterval.secondsPerDay,                              // One day
+            0 * TimeInterval.secondsPerDay,                              // Zero day
+            2 * TimeInterval.secondsPerDay,                              // Two days
             3 * TimeInterval.secondsPerDay,                              // Three days
             TimeInterval.daysPerWeek * TimeInterval.secondsPerDay,       // One week
             3 * TimeInterval.daysPerWeek * TimeInterval.secondsPerDay,   // Three weeks
