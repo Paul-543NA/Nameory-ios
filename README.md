@@ -4,7 +4,7 @@ type: meeting
 summary: " "
 matured: ❓/✅
 ---
-# Nameory 
+![Nameory title banner](./Visuals/banner.png)
 
 
 ![Swift Version](https://img.shields.io/badge/swift-5-orange.svg)
@@ -27,4 +27,4 @@ matured: ❓/✅
 - **Spaced Repetition System (SRS):** Algorithm adjusts review times based on your performance to keep memory fresh. 
 
 ## Screenshots
-![Nameory screenshots](./screenshots.png) ![Profile Screen](url-to-profile-screen-image)
+![Nameory screenshots](./Visuals/screenshots.png)
